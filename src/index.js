@@ -59,11 +59,18 @@ for (let i = 0; i < 5; i++) {
         case 1:
             console.log('Pista estilo RETA');
             jogador1.velocidade = jogador1.velocidade + sorteiaDado()
+            console.log(numeroAleatorio)
             jogador2.velocidade = jogador2.velocidade + sorteiaDado()
+            console.log(numeroAleatorio)
 
             if (jogador1.velocidade > jogador2.velocidade) {
                 console.log('Jogador 1 VENCEU, Velocidade jogador 1:', jogador1.velocidade, 'Velocidade jogador 2:', jogador2.velocidade)
                 jogador1.pontos = +1
+                jogador1.velocidade = jogador1.velocidade - numeroAleatorio
+                jogador2.velocidade = jogador1.velocidade - numeroAleatorio
+                console.log(numeroAleatorio)
+                console.log(jogador1.velocidade)
+                console.log(jogador2.velocidade)
             } else if (jogador2.velocidade > jogador1.velocidade) {
                 jogador2.pontos = +1
                 console.log('Jogador 2 VENCEU, Velocidade jogador 1:', jogador1.velocidade, 'Velocidade jogador 2:', jogador2.velocidade)
